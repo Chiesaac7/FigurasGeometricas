@@ -9,20 +9,18 @@ package figurasgeometricas;
  * @author isaac
  */
 public abstract class FG {
-    protected double perimetro;
-    protected double area;
 
     public double getPerimetro() {
-        return this.perimetro;
+        return this.CalcularPerimetro();
     }
 
     public double getArea() {
-        return this.area;
+        return this.CalcularArea();
     }
     
     
-    public abstract double CalcularPerimetro();
+    protected abstract double CalcularPerimetro();
     
-    public abstract double CalcularArea();
+    protected abstract double CalcularArea();
     
 }
