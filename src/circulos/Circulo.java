@@ -11,13 +11,14 @@ import figurasgeometricas.FG;
 public class Circulo extends FG {
     private double radio;
     private static final double PI=Math.PI;
+    
 
-    public double getRadio() {
+    public double getRadio(){
         return this.radio;
     }
     
     public double getDiametro(){
-        return this.radio*2;
+        return CalcularDiametro();
     }
     
     public static double getPI(){
@@ -31,22 +32,21 @@ public class Circulo extends FG {
     public Circulo(double radio) {
         this.radio = radio;
     }
+    
+    private double CalcularDiametro(){
+        return 2*radio;
+    }
    
     
     @Override
-    public double CalcularPerimetro(){
-        this.perimetro=2*radio*PI;
-        return perimetro;
+    protected double CalcularPerimetro(){
+        return 2*radio*PI;
     }
     
     
     @Override
-    public double CalcularArea(){
-        this.area=Math.pow(radio, 2)*PI;
-        return area;
+    protected double CalcularArea(){
+        return Math.pow(radio, 2)*PI;
     }
-    
-    
-    
-    
+   
 }
